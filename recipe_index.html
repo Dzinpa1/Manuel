@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta property="og:title" content="Manuellinc...">
+    <title>Frontend Mentor | QR code component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;600;700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+<style>
+    *, *::after, *::before{
+    box-sizing: border-box;
+}
+img,svg{
+    display: block;
+    max-width: 100%;
+}
+body{
+    font-family: "Outfit", sans-serif;
+    color: hsla(0, 0%, 0%, 0.5);
+    font-size: 16px;
+    line-height: 1.5;
+}
+.container{
+    background-color: hsl(30, 54%, 90%);
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    margin: 0;
+}
+.recipe-container{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    position: relative;
+    max-width: 710px;
+    min-height: 900px;
+    margin-inline: 2rem;
+    margin-block: 4rem;
+}
+@media screen and (min-width: 500px){
+    .recipe-image img{
+        max-width: 90%;
+        border-radius: 1rem;
+        width: calc(100% - 3rem); /* Reduce width by 4rem (2rem on each side) */
+        height: calc(100% - 3rem); /* Reduce height by 4rem (2rem on top and bottom) */
+        margin: 2.3rem auto; 
+    }
+}
+
+.recipe-header{
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+}
+.recipe-title{
+    font-family: "Young Serif", serif;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: hsl(24, 5%, 18%);
+}
+.recipe-title-content{
+    margin-top: 0;
+    color: hsla(0, 0%, 0%, 0.5);
+}
+.prep-time{
+    margin: 0 auto;
+    display: block;
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    width: 90%;
+    background: hsl(330, 100%, 98%);
+}
+.prep-time h2{
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 600;
+    color: hsl(332, 51%, 32%);
+}
+.prep-time span{
+    font-weight: bold;
+}
+.list-item-2, .list-item-3{
+    margin-top: 0.5rem;
+}
+.list-item{
+    padding-left: 15px;
+}
+
+.ingredients-section{
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    padding-bottom: 1rem;
+    border-bottom: 0.1px solid hsla(0, 0%, 0%, 0.3);
+}
+.ing-list-item{
+    margin-bottom: 0.5rem;
+    padding-left: 15px;
+}
+.section-title{
+    font-family: "Young Serif", serif;
+    color: hsl(14, 45%, 36%);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.instructions-section{
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    padding-bottom: 1rem;
+    border-bottom: 0.1px solid hsla(0, 0%, 0%, 0.3);
+}
+.inst-list-item{
+    margin-bottom: 0.5rem;
+    padding-left: 15px;
+}
+.instructions-list span{
+    font-weight: bold;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-collapse: collapse;
+}
+.cell {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.cell-7, .cell-8 {
+    border-bottom: 0;
+    padding: 10px;
+}
+.grid-container span{
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+.instructions-section-grid{
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    padding-bottom: 1rem;
+}
+</style>
+</head>
+<body>
+   <div class="container">
+    <div class="recipe-container">
+        <div class="recipe-image">
+            <img src="https://images.slurrp.com/prodrich_article/hprbozqi5l6.webp?impolicy=slurrp-20210601&width=880&height=500" alt="omelette">
+        </div>
+        <div class="recipe-header" >
+            <h1 class="recipe-title">Simple Omelette Recipe</h1>
+            <p class="recipe-title-content">An easy and quick dish, perfect for any meal. this classic omelette combines beaten eggs
+            cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+            </p>
+        </div>
+        <div class="prep-time">
+            <h2>Preparation time</h2>
+            <ul class="prep-time-list">
+                <li class="list-item list-item-1"><span>Total:</span> Approximately 10 minutes</li>
+                <li class="list-item list-item-2"><span>Preparation:</span> 5 minutes</li>
+                <li class="list-item list-item-3"><span>Cooking:</span> 5 minutes</li>
+            </ul>
+        </div>
+        <div class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            <ul class="ingredients-list">
+                <li class="ing-list-item item-1">2-3 large eggs</li>
+                <li class="ing-list-item item-2">Salt, to taste</li>
+                <li class="ing-list-item item-3">Pepper, to taste</li>
+                <li class="ing-list-item item-4">1 tablespoon of butter oil</li>
+                <li class="ing-list-item item-5">Optional filings: cheese, diced vegetables, cooked meats, herbs</li>
+            </ul>
+        </div>
+        <div class="instructions-section">
+            <h3 class="section-title">Instructions</h3>
+            <ol class="instructions-list">
+                <li class="inst-list-item item-1"><span>Beat the eggs: </span>In a bowl, beat the eggs with apinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+                <li class="inst-list-item item-2"><span>Heat the pan: </span>Place anon-stick frying pan over medium heat and add buitter or oil.</li>
+                <li class="inst-list-item item-3"><span>Cook the omelette: </span>Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</li>
+                <li class="inst-list-item item-4"><span>Add fillings (optional): </span>When the eggs begin toset at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
+                <li class="inst-list-item item-5"><span>Fold and serve: </span>As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it into a plate</li>
+                <li class="inst-list-item item-6"><span>Enjoy: </span>Serve hot, with additional salt and pepper if needed.</li>
+            </ol>
+        </div>
+        <div class="instructions-section-grid">
+            <h3 class="section-title">Nutrition</h3>
+            <p>The table below shows nutritional values per serving without the additional fillings.</p>
+            <div class="grid-container">
+                <div class="cell">Calories</div>
+                <div class="cell"><span>277kcal</span></div>
+                <div class="cell">Carbs</div>
+                <div class="cell"><span>0g</span></div>
+                <div class="cell">Protein</div>
+                <div class="cell"><span>20g</span></div>
+                <div class="cell-7">Fat</div>
+                <div class="cell-8"><span>22g</span></div>
+              </div>
+        </div>
+    </div>
+    
+   </div>
+    
+</body>
+</html>
