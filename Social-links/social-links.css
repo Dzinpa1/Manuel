@@ -1,0 +1,77 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+img,svg{
+    display: block;
+    max-width: 100%;
+}
+body{
+    background-color: hsl(0, 0%, 8%);
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+}
+.container{
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+}
+.profile-container{
+    background: hsl(0, 0%, 12%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    min-height: 500px;
+    position: relative;
+    width: 400px;
+    margin-inline: 2rem;
+    margin-block: 4rem;
+}
+.profile-image img{
+    max-width: 25%;
+    border-radius: 50%;
+    margin: 3rem auto;
+    margin-bottom: 20px; 
+}
+.profile-info{
+    text-align: center;
+}
+.profile-info h1{
+    font-size: 24px;
+    margin: 0;
+    color: hsl(0, 0%, 100%);
+}
+.profile-info h2{
+    font-size: 15px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    color: hsl(75, 94%, 57%);
+}
+.profile-info p{
+    font-size: 14px;
+    color: hsl(0, 0%, 100%);
+}
+.btn{
+    display:block;
+    width: 80%;
+    margin: 1rem auto;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid hsl(0, 0%, 20%);
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    font-size: 14px;
+    background: hsl(0, 0%, 20%);
+    cursor: pointer;
+    font-weight: 900;
+}
+.btn:hover{
+    border: 1px solid hsl(75, 94%, 57%);
+    background: hsl(75, 94%, 57%);
+    transition: 0.5s;
+    color: hsl(0, 0%, 12%);
+}
+.btn-section{
+    margin: 1.5rem auto;
+    margin-bottom: 3rem;
+}
