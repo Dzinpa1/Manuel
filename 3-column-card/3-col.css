@@ -1,0 +1,95 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+img,svg{
+    display: block;
+    max-width: 100%;
+}
+body{
+    background-color: hsl(0, 0%, 95%);
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+}
+.container{
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    height: 500px;
+    width: 837px;
+    margin-inline: 2rem;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* Switch to 1 column layout */
+        grid-template-rows: repeat(3, 1fr); /* Set 3 rows */
+    }
+}
+.grid-1{
+    background: hsl(31, 77%, 52%);
+}
+.grid-2{
+    background: hsl(184, 100%, 22%);
+}
+.grid-3{
+    background: hsl(179, 100%, 13%);
+}
+.heading{
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 38px;
+}
+.grid-info{
+    margin: 0 auto;
+    width: 70%;
+    text-align: left;
+    color: hsl(0, 0%, 95%);
+}
+.grid-info img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.mini-grid{
+    display: grid;
+    gap: 3.5rem;
+}
+.btn{
+    margin-bottom: 40px;
+}
+.content{
+    line-height: 1.5;
+}
+.btn{
+    background: hsl(0, 0%, 95%);
+    display: block;
+    text-decoration: none;
+    border: 2px solid hsl(0, 0%, 95%);
+    padding: 12px 34px;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.btn:hover{
+    background: transparent;
+    transition: 0.5s;
+    color: hsl(0, 0%, 95%);
+}
+.btn-1{
+    color: hsl(31, 77%, 52%);
+}
+.btn-2{
+    color: hsl(184, 100%, 22%);
+}
+.btn-3{
+    color: hsl(179, 100%, 13%);
+}
