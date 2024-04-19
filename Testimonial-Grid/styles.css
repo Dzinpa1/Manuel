@@ -1,0 +1,141 @@
+/* Global Box Sizing */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+    color: hsl(0, 0%, 0%);
+    line-height: 1.5;
+}
+/* Container Styles */
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+/* Grid Container Styles */
+.grid-container {
+    background: hsl(210, 46%, 95%);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 4rem auto;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    width: 95%;
+}
+/* Grid Card Styles */
+.grid-card {
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.grid-card img {
+    border-radius: 50%;
+    display: inline-block;
+    width: 2.5rem;
+}
+/* Grid Card Info Styles */
+.grid-card-info {
+    display: block;
+    margin: 1rem 2rem;
+    max-width: 100%;
+}
+/* Card Paragraph Styles */
+.card-paragraph {
+    color: hsl(0, 0%, 81%);
+}
+.paragraph-3, .paragraph-4{
+    color: hsl(217, 19%, 35%);
+}
+/* Card Heading Styles */
+.card-heading {
+    color: hsl(0, 0%, 100%);
+    font-size: 0.6rem;
+    line-height: normal;
+}
+.heading-3, .heading-4{
+    color: hsl(219, 29%, 14%);
+}
+/* Card Title Styles */
+.card-title {
+    color: hsl(0, 0%, 81%);
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.card-title p {
+    margin-bottom: 0;
+}
+
+.card-title span {
+    font-size: 14px;
+    font-weight: 700;
+}
+.title-3, .title-4{
+    color: hsl(217, 19%, 35%);
+}
+.card-1, .card-2, .card-3, .card-4, .card-5{
+    position: relative;
+}
+/* Specific Card Styles */
+.card-1 {
+    background: hsl(263, 55%, 52%);
+    grid-column: 1 / span 2;
+}
+
+.card-2 {
+    background: hsl(217, 19%, 35%);
+}
+
+.card-3 {
+    background: hsl(0, 0%, 100%);
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 2;
+    width: 276px;
+}
+
+.card-4 {
+    background: hsl(0, 0%, 100%);
+}
+
+.card-5 {
+    background: hsl(219, 29%, 14%);
+    grid-column: 2 / span 2;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card-1,
+    .card-2,
+    .card-3,
+    .card-4,
+    .card-5 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .grid-card-info {
+        margin: 2rem auto;
+        width: 90%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card-3 {
+        width: 100%;
+    }
+}
