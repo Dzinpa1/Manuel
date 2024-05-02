@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta property="og:title" content="Manuellinc...">
+    <title>Frontend Mentor | Newsletter sign-up form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;600;700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Young+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;600;700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Young+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <div class="container">
+        <div class="grid-container">
+            <div class="grid-content-col">
+                <div class="grid-content-col-heading">
+                    <h1>Stay Updated!</h1>
+                    <p>Join 60,000+ project managers receiving monthly updates on:</p>
+                </div>
+                <div class="list">
+                    <p><img src="images/icon-list.svg" alt="list-icon"><span>Product discovery and building what matters</span></p>
+                    <p><img src="images/icon-list.svg" alt="list-icon"><span>Measuring to ensure updates are a success</span></p>
+                    <p><img src="images/icon-list.svg" alt="list-icon"><span>And much more!</span></p>
+                  </div>
+                  <form class="subscribe-form">
+                    <div class="label">
+                        <div class="email-label"><label for="userEmail">Email address</label></div>
+                        <div class="error-state error-message">Valid email required</div>
+                    </div>
+                    <input class="input-1" type="Email" id="Email1" placeholder="email@company.com" required pattern=".+@.+\.com">
+                    <input class="input-2" type="Email" id="Email2" placeholder="email@company.com" pattern=".+@.+\.com">
+                    <button type="submit" class="subscribe-btn">Subscribe to monthly newsletter</button>
+                </form>
+            </div>
+            <div class="grid-image-col">
+                <img class="desktop-image" src="images/illustration-sign-up-desktop.svg" alt="">
+                <img class="mobile-image" src="images/illustration-sign-up-mobile.svg" alt="">
+            </div>
+        </div>
+    </div>
+   <!-----------------------------------Success state ------------------------------> 
+    <div class="success-state container">
+        <div class="pop-up-container">
+            <div class="pop-up-content">
+                <div class="content">
+                    <img src="images/icon-success.svg" alt="success-icon">
+                    <h1>Thanks for subscribing!</h1>
+                    <p>A confirmation email has been sent to <b> email@company.com.</b> Please open it and click the button inside to confirm your subscription.</p>
+                </div>
+                <button type="submit" class="pop-up-btn">Dismiss message</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
