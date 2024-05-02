@@ -1,0 +1,262 @@
+/* Global Box Sizing */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-color: hsl(0, 0%, 100%);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: hsl(0, 0%, 0%);
+    line-height: 1.5;
+}
+p{
+    margin-top: 0;
+    font-weight: 400;
+}
+img,svg{
+    max-width: 100%;
+    height: 100%;
+}
+
+.container{
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    margin: 0;
+    background: hsl(235, 18%, 26%);
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    min-height: 500px;
+    width: 800px;
+    margin-inline: 2rem;
+    margin-block: 4rem;
+    position: relative;
+    overflow: hidden;
+    background:hsl(0, 0%, 100%);
+}
+.grid-content-col{
+    max-width: 80%;
+    margin: 3rem auto;
+}
+.grid-content-col h1{
+    font-weight: 700;
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+}
+.input-1{
+    margin-bottom: 1.5rem;
+    height: 3rem;
+    width: 20rem;
+    border-radius: 0.4rem;
+    padding: 0 20px 0 20px;
+    border: 1px solid hsl(231, 7%, 60%);
+}
+.input-1:hover{
+    border: 1px solid hsl(234, 29%, 20%);
+}
+.subscribe-form .label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.email-label{
+    margin-top: 2rem;
+    margin-bottom: 5px;
+    display: block;
+    font-size:12px;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+}
+.subscribe-btn{
+    display: block;
+    height: 3rem;
+    width: 20rem;
+    border-radius: 0.4rem;
+    background: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+.subscribe-btn:hover{
+    background: rgb(255,104,63);
+    background: linear-gradient(90deg, rgba(255,84,118,1) 0%, rgba(255,104,63,1) 100%);
+    box-shadow: 0 5px 10px 0 rgba(255,84,118,0.5);
+}
+/*-------------------------------Error state------------------------------*/
+.input-2{
+    margin-bottom: 1.5rem;
+    height: 3rem;
+    width: 20rem;
+    border-radius: 0.4rem;
+    padding: 0 20px 0 20px;
+    border: 1px solid hsl(4, 100%, 67%);
+    background: hsla(4, 100%, 67%, 0.15);
+    display: none;
+}
+.error-message{
+    color: hsl(4, 100%, 67%);
+    font-size:12px;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 5px;
+    display: none;
+}
+/*---------------------------------sucess state---------------------------------------------*/
+.success-state{
+    display: none;
+}
+.pop-up-container{
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    min-height: 400px;
+    width: 400px;
+    margin-inline: 2rem;
+    margin-block: 4rem;
+    position: relative;
+    overflow: hidden;
+    background:hsl(0, 0%, 100%);
+    display: flex; /* Add display flex to the container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 20px; /* Add padding for spacing inside the container */
+}
+.pop-up-content{
+    max-width: 90%;
+    margin: 3rem auto;
+}
+.pop-up-content h1{
+    font-weight: 700;
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+.pop-up-btn{
+    display: block;
+    height: 3rem;
+    width: 100%;
+    border-radius: 0.4rem;
+    background: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    margin-top: 1.5rem;
+}
+.pop-up-btn:hover{
+    background: rgb(255,104,63);
+    background: linear-gradient(90deg, rgba(255,84,118,1) 0%, rgba(255,104,63,1) 100%);
+    box-shadow: 0 5px 10px 0 rgba(255,84,118,0.5);
+}
+@media (max-width: 512px){
+    .pop-up-container{
+        border-radius: 0;
+        min-height: 100vh;
+        width: 100vw;
+        margin-inline: 0;
+        margin-block: 0;
+        display: flex; /* Add display flex to the container */
+        flex-direction: column; /* Stack children vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 20px; /* Add padding for spacing inside the container */
+    }
+    .pop-up-content{
+        max-width: 90%;
+        margin: auto;
+    }
+    .content{
+        margin: 50% auto;
+    }
+    .pop-up-content img {
+        display: block; 
+        max-width: 100px;
+        height: auto;
+        align-self: flex-start;
+    }
+}
+/*-------------------------------------- Adjusted List Styles -----------------------------------*/
+.list p{
+    display: flex; /* Use flexbox for positioning */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+    gap: 1rem; /* Add some space between the icon and the text */
+    font-size: 14px;
+}
+.list img {
+    width: 1.5rem;
+    height: auto;
+}
+.grid-image-col {
+    padding: 20px; /* Adjust the padding as needed */
+    position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+.desktop-image {
+    display: block;
+    width: 100%; /* Set width to 100% of the container */
+    height: 100%; /* Set height to 100% of the container */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-radius: 1rem;
+}
+.mobile-image{
+    display: none;
+}
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Switch to 1 column layout */
+        grid-template-rows: auto 1fr;
+        border-radius: 0;
+    } 
+    .grid-image-col {
+        padding: 0;
+    }
+    .mobile-image{
+        display: block;
+        width: 100%;
+    }
+    .desktop-image{
+        display: none;
+    }
+    .grid-content-col{
+        order: 2;
+    } 
+}
+@media (max-width: 436px){
+.subscribe-btn, .input-1, .input-2{
+    width: 14rem;
+  }
+.grid-content-col h1{
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+.grid-content-col{
+    max-width: 90%;
+    margin: 3rem auto;
+}
+}
+@media (max-width: 368px){
+    .subscribe-btn{
+        width: 13.5rem;
+        font-size: 12px;
+      }
+      .input-1, .input-2{
+        width: 13.5rem;
+    }
+}
+@media (max-width: 306px){
+      .subscribe-btn, .input-1, .input-2{
+        width: 12rem;
+    }
+    .grid-content-col h1{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+}
