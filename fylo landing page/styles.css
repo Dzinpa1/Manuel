@@ -493,8 +493,11 @@ footer{
         width: 67%;
         padding: 1rem;
     }
-    .get-started-btn2, .get-started-btn{
+    .get-started-btn{
         font-size: 12px;
+    }
+    .get-started-btn2{
+         font-size: 10px;
     }
 }
 @media (max-width: 1400px){
