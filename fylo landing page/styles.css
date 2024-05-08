@@ -381,6 +381,64 @@ footer{
 .fa-twitter{
     margin-inline: 5px;
 }
+@media (max-width: 1400px){
+    body{
+        font-size: 15px;
+    }
+    .grid-content h1, .callout-card-content h2{
+        font-size: 1.6rem;
+    }
+    .card-content{
+        font-size: 12px;
+    }
+    .testimonial-card{
+        width: 67%;
+        padding: 1.5rem;
+    }
+    .get-started-btn2, .get-started-btn{
+        font-size: 13px;
+    }
+}
+@media (max-width: 1200px){
+    body{
+        font-size: 14px;
+    }
+    .grid-content h1, .callout-card-content h2{
+        font-size: 1.5rem;
+    }
+    .card-content{
+        font-size: 11px;
+    }
+    .testimonial-card{
+        width: 67%;
+        padding: 1rem;
+    }
+    .get-started-btn, .get-started-btn2{
+        font-size: 12px;
+    }
+}
+@media (max-width: 1024px){
+    body{
+        font-size: 13px;
+    }
+    .grid-content h1, .callout-card-content h2{
+        font-size: 1.4rem;
+    }
+    .card-content{
+        font-size: 10px;
+    }
+    .testimonial-card{
+        width: 90%;
+        padding: 1rem;
+    }
+    .get-started-btn{
+        font-size: 11px;
+    }
+    .get-started-btn2{
+        font-size: 10px;
+        width: 60%;
+    }
+}
 @media (max-width: 768px){
     .header-grid-container, .callout-card, .grid-container-1{
         grid-template-columns: 1fr; /* Switch to 1 column layout */
@@ -460,63 +518,10 @@ footer{
     .grid-content h1{
         font-size: 1.8rem;
     }
-}
-@media (max-width: 1024px){
-    body{
-        font-size: 13px;
-    }
-    .grid-content h1, .callout-card-content h2{
-        font-size: 1.4rem;
-    }
-    .card-content{
-        font-size: 10px;
-    }
     .testimonial-card{
-        width: 90%;
-        padding: 1rem;
-    }
-    .get-started-btn{
-        font-size: 11px;
-    }
-    .get-started-btn2{
-        font-size: 11px;
-        width: 55%;
-    }
-}
-@media (max-width: 1200px){
-    body{
-        font-size: 14px;
-    }
-    .grid-content h1, .callout-card-content h2{
-        font-size: 1.5rem;
-    }
-    .card-content{
-        font-size: 11px;
-    }
-    .testimonial-card{
-        width: 67%;
-        padding: 1rem;
-    }
-    .get-started-btn, .get-started-btn2{
-        font-size: 12px;
-    }
-}
-@media (max-width: 1400px){
-    body{
-        font-size: 15px;
-    }
-    .grid-content h1, .callout-card-content h2{
-        font-size: 1.6rem;
-    }
-    .card-content{
-        font-size: 12px;
-    }
-    .testimonial-card{
-        width: 67%;
-        padding: 1.5rem;
-    }
-    .get-started-btn2, .get-started-btn{
-        font-size: 13px;
+        width: 70%;
+        margin: auto;
+        text-align: left;
     }
 }
 @media (max-width: 375px){
