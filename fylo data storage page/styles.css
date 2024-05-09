@@ -120,6 +120,14 @@ p{
     align-items: center;
     cursor: pointer;
 }
+@keyframes slideIn {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 81.5%;
+    }
+  }
 .storage-reading{
     width: 81.5%;
     height: 0.8rem;
@@ -129,6 +137,7 @@ p{
     background: linear-gradient(90deg, rgba(255,163,153,1) 0%, rgba(255,77,151,1) 100%);
     display: flex;
     justify-content: end;
+    animation: 1500ms slideIn ease-in-out forwards;
 }
 .slider{
     width: 0.7rem;
