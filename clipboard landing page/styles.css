@@ -123,7 +123,7 @@ img, svg{
 }
 @media screen and (max-width: 768px){
     body { 
-        background-image: url(/images/bg-header-desktop.png);
+        background-image: url(/images/bg-header-mobile.png);
     }
     .footer-section{
         flex-direction: column;
