@@ -4,7 +4,7 @@
 }
 /* Body Styles */
 body { 
-    background-image: url(images/bg-header-desktop.png);
+    background-image: url(/images/bg-header-desktop.png);
     background-size: 100vw;
     background-repeat: no-repeat;
     font-family: "Bai Jamjuree", sans-serif;
