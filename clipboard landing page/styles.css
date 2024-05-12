@@ -1,0 +1,248 @@
+   /* Global Box Sizing */
+   *, *::after, *::before {
+    box-sizing: border-box;
+}
+/* Body Styles */
+body { 
+    background-image: url(/images/bg-header-desktop.png);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+h1, h2{
+    color: hsl(210, 10%, 33%);
+    font-weight: 600;
+}
+p{
+    margin-top: 0;
+    color: hsl(201, 11%, 66%);
+}
+img, svg{
+    max-width: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+}
+.section-1, .section-6{
+    margin: 5rem auto;
+    width: 45%;
+}
+.btn{
+    border-radius: 2.5rem;
+    color: hsl(0, 0%, 100%);
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 1rem 0;
+    outline: 0;
+    padding: 1rem 2vw;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 18px;
+}
+@media screen and (min-width: 469px){
+    .btn{
+        margin: auto 5px;
+    }
+}
+.btn:hover{
+    opacity: 0.7;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+.btn-ios{
+    background-color: hsl(171, 66%, 44%);
+}
+.btn-mac{
+    background-color: hsl(233, 100%, 69%);
+}
+.sub-section-1{
+    margin-top: 5rem;
+}
+.section-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 105%;
+    gap: 10rem;
+}
+.section-2-content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    gap: 2rem;
+    width: 55%;
+    height: 80%;
+    margin: auto 0;
+}
+.section-2-content p{
+    line-height: 1.8;
+}
+.section-2-content h3{
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+@media screen and (max-width: 1200px){
+    .section-2{
+        gap: 5rem;
+    }
+    .section-2-content{
+        gap: 1.5rem;
+        width: 65%;
+        height: 100%;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 992px){
+    .section-1, .section-6{
+        width: 75%;
+    }
+    .section-2{
+        width: 95%;
+        gap: 5rem;
+    }
+    .section-2-content{
+        gap: 1.5rem;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+    .section-5{
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+}
+@media screen and (max-width: 768px){
+    body { 
+        background-image: url(/images/bg-header-mobile.png);
+    }
+    .footer-section{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-col-2 ul, .footer-col-3 ul, .footer-col-4 ul{
+        margin: 0 auto;
+    }
+    .footer-col-5{
+        margin-top: 1.5rem;
+    }
+    .section-2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        width: 95%;
+    }
+    .section-2-content{
+        align-items: center;
+        text-align: center;
+        width: 85%;
+    }
+    .section-1, .section-6{
+        width: 85%;
+    }
+    .section-4{
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-4 div{
+        width: 90%;
+    }
+    .btn{
+        padding: 1rem 4vw;
+       }
+}
+@media screen and (max-width: 469px){
+    .btn-ios, .btn-mac{
+     width: 100%;
+    }
+}
+.section-3{
+    margin: 5rem auto;
+}
+.section-3 div{
+    margin: auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+.section-3 h2{
+    margin-bottom: 0.5rem;
+}
+.section-3 img{
+    margin: auto;
+    margin-top: 5rem;
+}
+.section-4{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    gap: 1rem;
+    width: 85%;
+}
+.section-4 div{
+    width: 95%;
+    display: flex; /* New */
+    flex-direction: column; /* New */
+    align-items: center; /* New */
+}
+.sec4-col-2 img, .sec4-col-3 img{
+    padding-bottom: 8px;
+}
+.section-5{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5rem auto;
+    width: 85%;
+}
+footer{
+    background: hsla(201, 11%, 66%, 0.15);
+    min-height: 10rem;
+    overflow-x: hidden;
+}
+.footer-section{
+    display: flex;
+    justify-content: space-around;
+    justify-self: flex-start;
+    width: 85%;
+    margin: 3rem auto;
+}
+.footer-logo{
+    width: 5%;
+    height: 5%;
+    align-self: center;
+}
+.footer-col-5{
+    display: flex;
+    align-self: center;
+    gap: 1.5rem;
+}
+.footer-col-5 a:hover img {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(95%) saturate(1352%) hue-rotate(133deg) brightness(91%) contrast(92%);
+}
+.footer-col-2 ul, .footer-col-3 ul, .footer-col-4 ul{
+    list-style: none;
+    line-height: 2.5;
+    padding-left: 0;
+}
+.footer-section ul li a {
+    text-decoration: none; 
+    color: hsl(210, 10%, 33%);
+    font-weight: 500;
+}
+.footer-section ul li a:hover {
+    color: hsl(171, 66%, 44%);
+}
+
+
