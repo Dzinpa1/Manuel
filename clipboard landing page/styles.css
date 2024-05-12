@@ -1,6 +1,6 @@
-   /* Global Box Sizing */
-   *, *::after, *::before {
-    box-sizing: border-box;
+/* Global Box Sizing */
+*, *::after, *::before {
+ box-sizing: border-box;
 }
 /* Body Styles */
 body { 
