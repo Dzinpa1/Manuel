@@ -177,19 +177,18 @@ p{
     font-weight: 600;
     cursor: pointer;
 }
-.meassage-section{
+.message-section{
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 0.5rem;
     padding: 0.5rem;
 }
-.meassage-section article{
+.message-section div{
     max-width: 60%;
     box-shadow: 3px rgba(0, 0, 0, 0.5);
-    
 }
-.meassage-section p{
+.message-section p{
     font-size: 9px;
     font-weight: 400;
     line-height: 1.3;
