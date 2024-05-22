@@ -1,0 +1,146 @@
+ /* Global Box Sizing */
+ *, *::after, *::before {
+    box-sizing: border-box;
+}
+/* Body Styles */
+body { 
+    align-items: center;
+    font-family: "Neue Montreal", sans-serif;
+    background: hsl(0, 0%, 100%);
+    font-size: 14px;
+}
+p{
+    margin: 0;
+    color: hsl(201, 11%, 66%);
+    font-weight: normal;
+}
+/*----------------------------------------header-----------------------------------------------*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    flex-shrink: 0;
+    position: fixed; 
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: hsla(15, 8%, 90%, 0.75);
+    -webkit-backdrop-filter: blur(1rem); /* Apply the blur effect */
+    backdrop-filter: blur(1rem); 
+    width: 17.5rem;
+    margin: auto;
+    border-radius: 2.5rem;
+    flex-shrink: 0;
+    outline: none;
+}
+.header-content a{
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+}
+.contact-item-c{
+    background: hsl(0, 0%, 100%);
+    border-radius: 40px;
+}
+.contact-item-a, .contact-item-b{
+    background: none
+}
+.header-item{
+    padding: 0.75rem 1.5rem;
+    margin: 5px auto;
+}
+/*------------------------------------------main section--------------------------------------*/
+.main-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; 
+}
+.main-section h1{
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing:-0.2px
+}
+.main-section span a{
+   text-decoration: none;
+   color: hsl(0, 0%, 50%);
+   transition: 0.3s;
+}
+.main-section span a:hover{
+    color: hsla(0, 0%, 50%, 0.5);
+}
+/*--------------------------------------------------footer section----------------------------------------------*/
+.footer{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 6rem;
+    width: 90%;
+    margin: 0 auto;
+    flex-shrink: 0;
+    outline: none;
+}
+.footer-content a{
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    transition: 0.3s;
+}
+.footer-content a:hover{
+    color: hsla(0, 0%, 50%, 0.5);
+}
+.footer-links{
+    display: flex;
+    gap: 1rem;
+}
+.footer-attribution{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+.footer-attribution p{
+    color: hsl(0, 0%, 0%);
+}
+.footer-attribution img{
+    max-width: 2rem; 
+    max-height: 2rem;
+}
+@media screen and (max-width: 1200px) and (min-width: 810px){
+    .main-section h1{
+        font-size: 48px;
+    }
+}@media screen and (max-width: 810px){
+    .main-section h1{
+        font-size: 30px;
+    }
+    .footer-content, .footer-attribution{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-content{
+        margin-bottom: 5rem;
+        gap: 0.5rem;
+    }
+    .footer-attribution{
+        gap: 0.25rem;
+    }
+}

@@ -1,0 +1,275 @@
+ /* Global Box Sizing */
+ *, *::after, *::before {
+    box-sizing: border-box;
+}
+/* Body Styles */
+body { 
+    align-items: center;
+    font-family: "Neue Montreal", sans-serif;
+    background: hsl(0, 0%, 100%);
+    font-size: 14px;
+}
+p{
+    margin: 0;
+    color: hsl(201, 11%, 66%);
+    font-weight: normal;
+}
+/*----------------------------------------header-----------------------------------------------*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    flex-shrink: 0;
+    position: fixed; 
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: hsla(15, 8%, 90%, 0.75);
+    -webkit-backdrop-filter: blur(1rem); /* Apply the blur effect */
+    backdrop-filter: blur(1rem); 
+    width: 17.5rem;
+    margin: auto;
+    border-radius: 2.5rem;
+    flex-shrink: 0;
+    outline: none;
+}
+.header-content a{
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+}
+.profile-item-b{
+    background: hsl(0, 0%, 100%);
+    border-radius: 40px;
+}
+.profile-item-a, .profile-item-c{
+    background: none
+}
+.header-item{
+    padding: 0.75rem 1.5rem;
+    margin: 5px auto;
+}
+/*-----------------------------------------------main----------------------------------------*/
+.first-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 85vh; 
+}
+.first-section h1{
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    width: 100%;
+    margin: auto;
+    letter-spacing:-0.2px
+}
+/*------------------------------------------profile grid section----------------------------------*/
+.profile-grid-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 85vw;
+    margin: auto;
+}
+.profile-grid-images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1.25rem;
+    padding: 2.5rem 0;
+}
+.profile-grid-images img{
+    width: 100%;
+    height: 78%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+/*------------------------------------------second grid section----------------------------------*/
+.second-grid-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin: auto;
+    text-align: center;
+}
+.second-grid-section-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    gap: 1.25rem;
+    width: 90vw;
+}
+.grid-box{
+    align-content: space-around;
+}
+.grid-box .unique{
+    background: hsla(15, 8%, 90%, 0.502);
+    font-weight: 400;
+    border-radius: 40px;
+    padding: 0.5rem 1rem;
+    color: hsl(0, 0%, 0%);
+    width: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+}
+/*------------------------------------------third grid section----------------------------------*/
+.third-grid-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 85%;
+    margin: auto;
+}
+.third-grid-section-images{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 1.25rem;
+    padding: 2.5rem 0;
+}
+.third-grid-section-image{
+    max-width: 60%;
+    margin: auto;
+    filter: invert(1);
+}
+.inverted-image{
+    max-width: 60%;
+    margin: auto;
+    filter: invert(0);
+}
+/*----------------------------------------------writings section-----------------------------------*/
+.about-section p, .experience-section p, .clients-section p{
+    background: hsla(15, 8%, 90%, 0.502);
+    border-radius: 40px;
+    padding: 0.5rem 1rem;
+    color: hsl(0, 0%, 0%);
+}
+/*------------------------------------------bottom section--------------------------------------*/
+.bottom-section, .about-section, .experience-section, .clients-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh; 
+    width: 45%;
+    margin: 0 auto;
+}
+.bottom-section h2, .about-section h2, .experience-section h2, .clients-section h2{
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing:-0.2px
+}
+.bottom-section span a{
+   text-decoration: none;
+   color: hsl(0, 0%, 50%);
+   transition: 0.3s;
+}
+.bottom-section span a:hover{
+    color: hsla(0, 0%, 50%, 0.5);
+}
+/*--------------------------------------------------footer section----------------------------------------------*/
+footer{
+    width: 100vw;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 6rem;
+    width: 90%;
+    margin: 0 auto;
+    flex-shrink: 0;
+    outline: none;
+}
+.footer-content a{
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    transition: 0.3s;
+}
+.footer-content a:hover{
+    color: hsla(0, 0%, 50%, 0.5);
+}
+.footer-links{
+    display: flex;
+    gap: 1rem;
+}
+.footer-attribution{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+.footer-attribution p{
+    color: hsl(0, 0%, 0%);
+}
+.footer-attribution img{
+    max-width: 2rem; 
+    max-height: 2rem;
+}
+@media screen and (max-width: 1200px) and (min-width: 810px){
+    .top-section h1{
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    .bottom-section, .about-section, .experience-section, .clients-section{ 
+        width: 75%;
+    }
+}@media screen and (max-width: 810px){
+    .first-section{
+        height: 65vh; 
+    }
+    .first-section h1{
+        font-size: 2.25rem;
+        font-weight: 400;
+    }
+    .profile-grid-section{
+        width: 95vw;
+        margin: auto;
+    }
+    .profile-grid-images{
+        height: 100%;
+    }
+    .second-grid-section-content, .third-grid-section-images{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 180px);
+    }
+    .bottom-section h2, .about-section h2, .experience-section h2, .clients-section h2{
+        font-size: 30px;
+    }
+    .bottom-section, .about-section, .experience-section, .clients-section{ 
+        width: 95%;
+        height: 30vh; 
+    }
+    .footer-content, .footer-attribution{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-content{
+        margin-bottom: 5rem;
+        gap: 0.5rem;
+    }
+    .footer-attribution{
+        gap: 0.25rem;
+    }
+}

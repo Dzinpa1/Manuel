@@ -1,0 +1,328 @@
+ /* Global Box Sizing */
+   *, *::after, *::before {
+    box-sizing: border-box;
+}
+/* Body Styles */
+body { 
+    align-items: center;
+    font-family: "Neue Montreal", sans-serif;
+    background: hsl(0, 0%, 100%);
+    font-size: 14px;
+}
+p{
+    margin: 0;
+    color: hsl(201, 11%, 66%);
+    font-weight: normal;
+}
+/*----------------------------------------header-----------------------------------------------*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    flex-shrink: 0;
+    position: fixed; 
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: hsla(15, 8%, 90%, 0.75);
+    -webkit-backdrop-filter: blur(1rem); /* Apply the blur effect */
+    backdrop-filter: blur(1rem); 
+    width: 17.5rem;
+    margin: auto;
+    border-radius: 2.5rem;
+    flex-shrink: 0;
+    outline: none;
+}
+.header-content a{
+    text-decoration: none;
+    color: hsl(201, 11%, 66%);
+}
+.item-a{
+    background: hsl(0, 0%, 100%);
+    border-radius: 40px;
+}
+.item-c, .item-b{
+    background: none
+}
+.header-item{
+    padding: 0.75rem 1.5rem;
+    margin: 5px auto;
+}
+/*-----------------------------------------------main----------------------------------------*/
+.top-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 9rem auto;
+    margin-bottom: 4rem;
+    text-align: center;
+    height: 27.5rem; 
+}
+.top-section h1{
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    width: 50%;
+    margin: auto;
+    letter-spacing:-0.2px
+}
+.top-section-content{
+    display: flex;
+    gap: 0.75rem;
+}
+.top-section-content-item{
+    padding: 0.5rem 1rem;
+}
+.item-1{
+    padding: 0.5rem 0 ;
+}
+.item-2, .item-3, .item-4{
+    background: hsla(15, 8%, 90%, 0.502);
+    border-radius: 40px;
+}
+/*------------------------------------------Image section----------------------------------*/
+.image-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 85vw;
+    margin: auto;
+}
+.grid-images{
+    display: grid;;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1.25rem;
+    padding: 2.5rem 0;
+}
+.grid-images img, .grid-images video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    position: relative;
+}
+.blur{
+    background: hsla(0, 0%, 0%, 0.25);
+    -webkit-backdrop-filter: blur(0.75rem); /* Apply the blur effect */
+    backdrop-filter: blur(0.75rem); 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    z-index: 1;
+    position: relative;
+    bottom: 100.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 1.5rem 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+}
+.grid-images a:hover .blur {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+.blur p{
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+}
+.grid-images a{
+    text-decoration: none;
+}
+.blur .arrow{
+    background: hsl(0, 0%, 100%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.lock-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.lock-content .light-text{
+    color: hsla(0, 0%, 100%, 0.65);
+}
+.blur .lock, .arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(0, 0%, 0%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.fa-lock, .fa-long-arrow-up{
+    font-size: large;
+    color: hsl(0, 0%, 100%);
+}
+.fa-long-arrow-up{
+    color: hsl(0, 0%, 0%);
+    transform: rotate(45deg);
+    clip-path: inset(0 0 15% 0); 
+}
+/*------------------------------------------bottom section--------------------------------------*/
+.bottom-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh; 
+}
+.bottom-section h2{
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing:-0.2px;
+}
+.bottom-section span a{
+   text-decoration: none;
+   color: hsl(0, 0%, 50%);
+   transition: 0.3s;
+}
+.bottom-section span a:hover{
+    color: hsla(0, 0%, 50%, 0.5);
+}
+/*--------------------------------------------------footer section----------------------------------------------*/
+footer{
+    width: 100vw;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 6rem;
+    width: 90%;
+    margin: 0 auto;
+    flex-shrink: 0;
+    outline: none;
+}
+.footer-content a{
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    transition: 0.3s;
+}
+.footer-content a:hover{
+    color: hsla(0, 0%, 50%, 0.5);
+}
+.footer-links{
+    display: flex;
+    gap: 1rem;
+}
+.footer-attribution{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+.footer-attribution p{
+    color: hsl(0, 0%, 0%);
+}
+.footer-attribution img{
+    max-width: 2rem; 
+    max-height: 2rem;
+}
+.stable-footer-btn {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 40px;
+    margin-bottom: 2rem;
+    height: 2.5rem;
+    width: auto;
+    padding: 0.75rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stable-footer-btn a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+}
+
+.stable-footer-btn img {
+    filter: invert(100%);
+    max-width: 1rem; 
+    max-height: 1rem;
+    margin: 0;
+    padding: 0;
+    margin-right: 0.5rem; 
+}
+.stable-footer-btn p {
+    margin: 0; 
+    padding: 0; 
+    font-size: 0.8rem; 
+    line-height: 1; 
+    color: hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 1261px) and (min-width: 1201px){
+    .top-section h1{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 810px){
+    .top-section h1{
+        font-size: 3rem;
+        font-weight: 400;
+        width: 60%;
+    }
+}@media screen and (max-width: 810px){
+    .top-section h1{
+        font-size: 2.25rem;
+        font-weight: 400;
+        width: 85%;
+    }
+    .image-section{
+        width: 95vw;
+        margin: auto;
+    }
+    .grid-images{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        width: 100%;
+        height: 100%;
+    }
+    .bottom-section h2{
+        font-size: 30px;
+    }
+    .footer-content, .footer-attribution{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-content{
+        margin-bottom: 5rem;
+        gap: 0.5rem;
+    }
+    .footer-attribution{
+        gap: 0.25rem;
+    }
+    .top-section-content{
+        display: none;
+    }
+}
