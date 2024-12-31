@@ -18,29 +18,28 @@ function isValidEmail(email) {
     return emailRegex.test(email) && email.trim().endsWith('.com');
 }
 
-// Reset error state
-function resetErrorState() {
-    errorMessage.style.display = 'none';
-    emailInput.style.border = '1px solid hsl(231, 7%, 60%)';
-    emailInput.style.background = 'hsl(0, 0%, 100%)';
-}   
+function toggleErrorState(hasError) {
+    if (hasError) {
+        errorMessage.style.display = 'block';
+        emailInput.classList.add('error'); // Add error styling
+    } else {
+        errorMessage.style.display = 'none';
+        emailInput.classList.remove('error'); // Remove error styling
+    }
+}
 
-
-// Function for submiting
-
+// Submit Function
 function submit() {
     const email = emailInput.value.trim();
+
     if (!email || !isValidEmail(email)) {
-        // Show error state
-        errorMessage.style.display = 'block';
-        emailInput.style.border = '1px solid hsl(4, 100%, 67%)';  
-        emailInput.style.background = 'hsla(4, 100%, 67%, 0.15)';   
+        toggleErrorState(true); // Show error
     } else {
         setTimeout(() => {
-            // Show success state
+            // Hide main container and show success
             mainContainer.style.display = 'none';
             successState.style.display = 'flex';
-            successEmail.textContent = email;
+            successEmail.textContent = email; // Display email
         }, 800);
     }
 }
@@ -51,25 +50,28 @@ subscribeBtn.addEventListener('click', (event) => {
     submit();
 });
 
-// Submitting on keyboard (Enter)
+// Submitting using enter key on keyboard
 emailInput.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-        event.preventDefault()
-        submit()
+        event.preventDefault();
+        submit();
     }
-})
-
-// Reset error state when input is modified
-emailInput.addEventListener('input', () => {
-    resetErrorState();
 });
 
-// Function for dismiss message
+
+// Reset error state when input is modified
+mainContainer.addEventListener('input', (event) => {
+    if (event.target.classList.contains('email-input')) {
+        toggleErrorState(false); // Reset error
+    }
+});
+
+// Dismiss success state
 dismissMessage.addEventListener('click', () => {
     setTimeout(() => {
         successState.style.display = 'none';
         mainContainer.style.display = 'flex';
-        emailInput.value = '';
-        resetErrorState(); // Reset error when dismissing
+        emailInput.value = ''; // Clear input
+        toggleErrorState(false); // Reset error state
     }, 500);
 });
