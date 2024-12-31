@@ -31,7 +31,11 @@
                   </div>
                   <form class="subscribe-form">
                     <div class="label">
-                        <div class="email-label"><label for="Email">Email address</label></div>
+                        <form aria-labelledby="email-form">
+                            <div class="email-label">
+                                <label for="Email">Email address</label>
+                            </div>
+                        </form>
                         <div class="error-state error-message">Valid email required</div>
                     </div>
                     <input class="email-input" type="Email" id="Email" placeholder="email@company.com" required pattern=".+@.+\.com">
