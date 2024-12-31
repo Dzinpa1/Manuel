@@ -34,8 +34,7 @@
                         <div class="email-label"><label for="userEmail">Email address</label></div>
                         <div class="error-state error-message">Valid email required</div>
                     </div>
-                    <input class="input-1" type="Email" id="Email1" placeholder="email@company.com" required pattern=".+@.+\.com">
-                    <input class="input-2" type="Email" id="Email2" placeholder="email@company.com" pattern=".+@.+\.com">
+                    <input class="email-input" type="Email" id="Email1" placeholder="email@company.com" required pattern=".+@.+\.com">
                     <button type="submit" class="subscribe-btn">Subscribe to monthly newsletter</button>
                 </form>
             </div>
@@ -45,20 +44,22 @@
             </div>
         </div>
     </div>
+<!-----------------------------------Sign up form end ------------------------------> 
+
+
    <!-----------------------------------Success state ------------------------------> 
-    <div class="success-state container">
+    <div class="success-state success-state-container">
         <div class="pop-up-container">
             <div class="pop-up-content">
                 <div class="content">
                     <img src="images/icon-success.svg" alt="success-icon">
                     <h1>Thanks for subscribing!</h1>
-                    <p>A confirmation email has been sent to <b> email@company.com.</b> Please open it and click the button inside to confirm your subscription.</p>
+                    <p>A confirmation email has been sent to <span class="success-email"></span> Please open it and click the button inside to confirm your subscription.</p>
                 </div>
-                <button type="submit" class="pop-up-btn">Dismiss message</button>
+                <button type="submit" class="dismiss-message">Dismiss message</button>
             </div>
         </div>
     </div>
-    <script>
-        
-    </script>
+
+    <script src="script.js" ></script>
 </body>
