@@ -1,14 +1,3 @@
-// getElementsById()
-
-// getElementsByClassName()
-
-// getElementsByTagName()
-
-// querySelector()
-
-// querySelectorAll()
-
-
 
 // DOM elements 
 const mainPage = document.getElementsByClassName('rating-page')[0];
