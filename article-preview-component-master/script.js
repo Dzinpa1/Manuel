@@ -1,15 +1,3 @@
-// getElementsById()
-
-// getElementsByClassName()
-
-// getElementsByTagName()
-
-// querySelector()
-
-// querySelectorAll()
-
-
-
 // DOM elements 
 const shareBtn = document.querySelector('.share-btn');
 const shareBubble = document.querySelector('.share-bubble');
