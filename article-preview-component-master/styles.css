@@ -222,6 +222,44 @@ img,svg{
         padding-bottom: 0;
     }
 }
+@media (max-width: 360px) {
+    .share-bubble{
+        width: 100%;
+        height: 5.15rem;
+        right: 0;
+        top: 32.3rem;
+        transform: translateY(-5%);
+    }
+    .grid-col-2{
+        padding-bottom: 0;
+    }
+}
+@media (max-width: 350px) {
+    .share-bubble{
+        width: 100%;
+        height: 5.35rem;
+        right: 0;
+        top: 32.3rem;
+        transform: translateY(-10%);
+    }
+    .grid-col-2{
+        padding-bottom: 0;
+    }
+}
+@media (max-width: 340px) {
+    .share-bubble{
+        width: 100%;
+        right: 0;
+        top: 32.3rem;
+        transform: translateY(-15%);
+    }
+    .grid-col-2{
+        padding-bottom: 0;
+    }
+    .grid-container {
+        min-height: 590px;
+    }
+}
 .share{
     letter-spacing: 4px;
     text-transform: uppercase;
