@@ -54,7 +54,7 @@ img,svg{
 .email-input{
     margin-bottom: 1.5rem;
     height: 3rem;
-    width: 20rem;
+    width: 100%;
     border-radius: 0.4rem;
     padding: 0 20px 0 20px;
     border: 1px solid hsl(231, 7%, 60%); 
@@ -83,7 +83,7 @@ img,svg{
 .subscribe-btn{
     display: block;
     height: 3rem;
-    width: 20rem;
+    width: 100%;
     border-radius: 0.4rem;
     background: hsl(234, 29%, 20%);
     color: hsl(0, 0%, 100%);
