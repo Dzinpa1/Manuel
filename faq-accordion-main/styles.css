@@ -1,0 +1,120 @@
+/* Global Box Sizing */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: "Work Sans", serif;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    position: relative;
+}
+p{
+    margin: 0;
+    font-weight: 400;
+}
+h1, h2{
+    margin: 0;
+    color: hsl(292, 42%, 14%);
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: hsl(275, 100%, 97%);
+}
+.desktop-image{
+    position: fixed;
+    top: 0;
+    height: 40vh;
+    width: 100vw;
+    object-fit: cover;
+}
+.mobile-image{
+    display: none;
+}
+.FAQ-box{
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    min-height: 400px;
+    width: 480px;
+    margin-inline: 2rem;
+    margin-block: 4rem;
+    background:hsl(0, 0%, 100%);
+    z-index: 1;
+}
+.box-header h1{
+    font-size: 2.5rem;
+}
+.box-header{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+.accordion-section{
+    width: 100%;
+}
+.accordion-row{
+    display: flex;  
+    flex-direction: column;   
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.3rem 0;
+    box-shadow: 0 0 1.5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background:transparent;
+}
+.row-heading{
+    font-size: 14px;
+    font-weight: 600;
+}
+.accordion-row-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row-paragraph{
+    color: hsl(292, 16%, 49%);
+    display: none;
+}
+.row-paragraph.active{
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+    .desktop-image{
+       display: none;
+    }
+    .mobile-image{
+        display: block;
+        position: fixed;
+        top: 0;
+        height: 40vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+}
+@media screen and (max-width: 600px) {
+    .FAQ-box{
+        min-height: 500px;
+        max-width: 300px;
+    }
+}
+
