@@ -1,15 +1,3 @@
-// getElementsById()
-
-// getElementsByClassName()
-
-// getElementsByTagName()
-
-// querySelector()
-
-// querySelectorAll()
-
-
-
 // DOM elements 
 
 const showBtns = document.querySelectorAll('.show');
