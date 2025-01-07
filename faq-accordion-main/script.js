@@ -1,20 +1,27 @@
 // DOM elements 
+const accordionRows = document.querySelectorAll('.accordion-row');
 
-const showBtns = document.querySelectorAll('.show');
+accordionRows.forEach((row) => {
+    const button = row.querySelector('.show'); 
+    const heading = row.querySelector('.row-heading'); 
+    const paragraph = row.querySelector('.row-paragraph'); 
+    const img = button.querySelector('img'); 
 
-showBtns.forEach(button => {
-    button.addEventListener('click', () => {
-        // Find the paragraph within the same accordion-row
-        const paragraph = button.closest('.accordion-row').querySelector('.row-paragraph');
-        paragraph.classList.toggle('active'); // Toggle active class
-        
-        const img = button.querySelector('img');
+    // Function to toggle active class and switch icon
+    const toggleAccordion = () => {
+        paragraph.classList.toggle('active'); // Toggle the visibility of the paragraph
+
+        // Toggle image source between plus and minus
         if (paragraph.classList.contains('active')) {
-            img.src = 'images/icon-minus.svg'; // Change to minus icon
-            img.alt = 'minus-icon'; // Update alt text for accessibility
+            img.src = 'images/icon-minus.svg';
+            img.alt = 'minus-icon'; 
         } else {
-            img.src = 'images/icon-plus.svg'; // Change back to plus icon
-            img.alt = 'plus-icon'; // Update alt text
+            img.src = 'images/icon-plus.svg'; 
+            img.alt = 'plus-icon';
         }
-    });
+    };
+
+    // Add event listeners to both button and heading
+    button.addEventListener('click', toggleAccordion); 
+    heading.addEventListener('click', toggleAccordion); 
 });
