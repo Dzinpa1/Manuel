@@ -127,6 +127,7 @@ h1, h2{
 @media (max-width: 500px) {
     .bar::before {
         width: calc(3rem * 0.8); /* Scale width proportionally */
+        padding: 0 22px;
     }
 }
   
