@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML|CSS|JS">
+    <meta property="og:title" content="Manuellinc...">
+    <title>Frontend Mentor |Expenses chart component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gowun+Batang:wght@400;700&family=Halant:wght@300;400;500;600;700&family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <main class="container">
+        <div class="expense-container">
+            <div class="grid-top-container">
+                <div class="balance-div">
+                    <p class="balance-inscription">
+                        My balance
+                    </p>
+                    <p class="balance">
+                        $921.48
+                    </p>
+                </div>
+                <div class="logo-div">
+                    <img class="logo" src="images/chart-logo.svg" alt="logo-image">
+                </div>
+            </div>
+            <div class="grid-bottom-container">
+                <h1 class="chart-heading">
+                    Spending - Last 7 days
+                </h1>
+                <div class="chart-box">
+                    <button aria-label="Spending bar for Monday" class="bar" data-label="mon"></button>
+                    <button aria-label="Spending bar for Tuesday" class="bar" data-label="tue"></button>
+                    <button aria-label="Spending bar for Wednesday" class="bar" data-label="wed"></button>
+                    <button aria-label="Spending bar for Thursday" class="bar" data-label="thu"></button>
+                    <button aria-label="Spending bar for Friday" class="bar" data-label="fri"></button>
+                    <button aria-label="Spending bar for Saturday" class="bar" data-label="sat"></button>
+                    <button aria-label="Spending bar for Sunday" class="bar" data-label="sun"></button>
+                </div>
+                <div class="chart-footer">
+                    <span class="footer-amt">
+                        <p class="footer-inscription left-footer-inscription">Total this month</p>
+                        <p class="monthly-expense">$478.33</p>
+                    </span>
+                    <span>
+                        <p class="percentage-increment">+2.4%</p>
+                        <p class="footer-inscription right-footer-inscription">from last month</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js" ></script>
+</body>
