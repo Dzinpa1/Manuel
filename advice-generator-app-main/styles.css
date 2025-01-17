@@ -26,17 +26,14 @@ h1, h2{
 }
 .advice-box{
     width: 520px;
-    height: 300px;
     margin-inline: 2rem;
-    margin-block: 4rem;
     background: hsl(217, 19%, 24%);
     position: relative;
     display: flex;
     flex-direction: column;
-    place-content: space-around;
     place-items: center;
+    gap: 2rem;
     border-radius: 1.25rem;
-    position: relative;
     padding: 3rem 2rem;
 }
 .advice-heading{
@@ -44,13 +41,14 @@ h1, h2{
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 0.25rem;
+    text-align: center;
 }
 .advice{
     margin: 0;
     text-align: center;
     color: hsl(193, 38%, 86%);
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 1vw, 1.5rem);
     transition: opacity 0.3s ease;
 }
 .desktop-pattern {
