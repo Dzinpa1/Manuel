@@ -1,0 +1,88 @@
+/* Global Box Sizing */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: "Manrope", serif;
+    line-height: 1.5;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+h1, h2{
+    margin: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: hsl(218, 23%, 16%);
+    position: relative;
+}
+.advice-box{
+    width: 520px;
+    height: 300px;
+    margin-inline: 2rem;
+    margin-block: 4rem;
+    background: hsl(217, 19%, 24%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-content: space-around;
+    place-items: center;
+    border-radius: 1.25rem;
+    position: relative;
+    padding: 3rem 2rem;
+}
+.advice-heading{
+    color: hsl(150, 100%, 66%);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.25rem;
+}
+.advice{
+    margin: 0;
+    text-align: center;
+    color: hsl(193, 38%, 86%);
+    font-weight: 800;
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+.desktop-pattern {
+    display: block;
+    max-width: 100%;
+}
+.mobile-pattern{
+    display: none;
+}
+@media (max-width: 520px) {
+    .mobile-pattern{
+        display: block;
+        max-width: 100%;
+    }
+    .desktop-pattern{
+        display: none;
+    }
+}
+.generate-btn{
+    position: absolute;
+    bottom: -2rem;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    background: hsl(150, 100%, 66%);
+    padding: 1.25rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.generate-btn:hover{
+    box-shadow: 0 3px 2rem 0.75rem hsl(150, 100%, 66%);
+}
