@@ -17,8 +17,17 @@ async function getAdvice() {
             adviceText.style.opacity = '1';
         }, 300);
     } catch (error) {
-        console.error('Error fetching advice:', error);
-        adviceText.textContent = 'Oops! Failed to get advice. Please try again.';
+
+        console.error('Detailed error:', error);
+        
+        // Provide more specific error message to user
+        if (error.name === 'TypeError') {
+            adviceText.textContent = 'Network error! Please check your internet connection.';
+        } else if (error.message.includes('status: 429')) {
+            adviceText.textContent = 'Too many requests! Please wait a moment and try again.';
+        } else {
+            adviceText.textContent = `Error: ${error.message}`;
+        }
         adviceText.style.opacity = '1';
     }
 }
