@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML|CSS|JS">
+    <meta property="og:title" content="Manuellinc...">
+    <title>Frontend Mentor | Conference ticket generator</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gowun+Batang:wght@400;700&family=Halant:wght@300;400;500;600;700&family=Inconsolata:wght@200..900&family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <div>
+        <img class="background-pattern pattern-top" src="images/pattern-squiggly-line-top.svg" alt="squiggly line">
+        <img class="background-pattern pattern-bottom" src="images/pattern-squiggly-line-bottom.svg" alt="squiggly line">
+        <img class="line-pattern" src="images/pattern-lines.svg" alt="line pattern">
+        <img class="circular-pattern" src="images/pattern-circle.svg" alt="circular pattern">
+    </div>
+    <main class="home-page container">
+       <img class="full-logo" src="images/logo-full.svg" alt="logo">
+       <h1 class="heading">Your Journey to Coding Conf 2025 Starts Here!</h1>
+       <p class="sub-heading">Secure your spot at next year's biggest coding conference.</p>
+       <form action="/submit" method="POST" class="ticket-form">
+
+        <div class="upload-container">
+            <p class="upload-label">Upload Avatar</p>
+            <label class="upload-field" for="file">
+                <div class="upload-box-inner">
+                    <div class="icon">
+                        <img class="upload-icon" src="images/icon-upload.svg" alt="upload icon">
+                    </div>
+                    <div class="upload-text">
+                       <span>Drag and drop or click to upload</span>
+                    </div>
+                </div>
+            <div class="uploaded-image-mode">
+                <div class="uploaded-image-box">
+                    <img class="uploaded-image" src="images/image-avatar.jpg" alt="upload icon">
+                </div>
+                <div class="uploaded-image-controls">
+                    <button class="control-btn remove-image">Remove Image</button>
+                    <button class="control-btn change-image">Change Image</button>
+                </div>
+            </div>
+                   <input class="upload-input" type="file" id="file" accept="image/jpeg, image/png" max="512000">
+            </label>
+           <div class="upload-info-box">
+            <img class="upload-info-icon" src="images/icon-info.svg" alt="upload info icon">
+            <p class="upload-info">Upload your photo (JPG or PNG, max size: 500KB).</p>
+            <p class="upload-info upload-error-info">file too large. Please upload a photo under 500KB</p>
+           </div>
+        </div>
+
+        <div class="input-container" >
+            <label class="input-label" for="name">Full Name</label>
+            <input class="input-box name-input" type="text" id="name" name="name" required>
+            <div class="full-name-error-box">
+                <img class="full-name-error-icon" src="images/icon-info.svg" alt=" info icon">
+                <p class="full-name-error-info">fullname is required</p>
+            </div>
+        </div>
+
+        <div class="input-container email-container">
+            <label class="input-label" for="Email">Email Address</label>
+            <input class="input-box email-input" type="Email" id="Email" placeholder="example@email.com" required pattern=".+@.+\.com">
+            <div class="email-error-info-box">
+                <img class="email-error-info-icon" src="images/icon-info.svg" alt="email info icon">
+                <p class="email-error-info">Please enter a valid email address</p>
+               </div>
+        </div>
+
+        <div class="input-container">
+            <label class="input-label" for="username">GitHub Username</label>
+            <input class="input-box username-input" type="text" id="username" placeholder="@yourusername" name="username" minlength="3" maxlength="15" required>
+            <div class="username-error-box">
+                <img class="username-error-icon" src="images/icon-info.svg" alt=" info icon">
+                <p class="username-error-info">Username is required</p>
+            </div>
+        </div>
+
+        <button type="submit" class="generate-btn">Generate My Ticket</button>
+    </form>
+    </main>
+
+    <div class="ticket-page ticket-page-container">
+        <img class="full-logo" src="images/logo-full.svg" alt="logo">
+        <h1 class="ticket-page-heading">Congrats <span class="ticket-name">Immanuel Baiden</span>! Your ticket is ready.</h1>
+        <p class="ticket-page-sub-heading">We've emailed your ticket to <span class="ticket-email"></span> and will send updates in the run up to the event.</p>
+        <div class="ticket-pattern-wrapper">
+            <img class="ticket-pattern" src="images/pattern-ticket.svg" alt="ticket pattern">
+        <div class="ticket-box">
+            <div class="ticket-row-1">
+                <img class="ticket-logo" src="images/logo-mark.svg" alt="logo mark">
+                <div class="ticket-logo-info-box">
+                    <p class="ticket-logo-info">Coding Conf</p>
+                    <span class="conf-date">Jan 31, 2025 / Austin, TX</span>
+                </div>
+            </div>
+            <div class="ticket-row-2">
+                <img class="ticket-avatar-image" src="images/image-avatar.jpg" alt="image avater">
+                <div class="ticket-avatar-info">
+                    <p class="ticket-avatar-name">Immanuel Baiden</p>
+                    <div class="github-info">
+                        <img class="github-icon" src="images/icon-github.svg" alt="github icon">
+                        <p class="ticket-avatar-github-username">@immanuelbaiden4199</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js" ></script>
+</body>

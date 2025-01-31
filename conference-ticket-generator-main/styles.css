@@ -1,0 +1,407 @@
+/* Global Box Sizing */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-image: url('../images/background-desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This will keep the background fixed while scrolling */
+    background-repeat: no-repeat;
+    font-family: "Inconsolata", serif;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 100vh;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 376px) {
+    body {
+        background-image: url('../images/background-tablet.png');
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url('../images/background-mobile.png');
+        background-attachment: scroll;
+    }
+}
+
+p {
+    margin: 0;
+    font-size: 18px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.container, .ticket-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 45rem;
+    margin-inline: auto;
+    text-align: center;
+    z-index: 1;
+}
+.background-pattern {
+    position: fixed;
+    pointer-events: none; /* Prevents patterns from interfering with interactions */
+    z-index: 0;
+}
+
+.pattern-top {
+    right: 0;
+    top: 0;
+    max-width: 50%; 
+}
+
+.pattern-bottom {
+    left: 0;
+    bottom: 0;
+    max-width: 50%;
+}
+@media screen and (max-width: 820px) {
+    .container,  .ticket-page-container {
+        max-width: 35rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .background-pattern {
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container,  .ticket-page-container {
+        max-width: 90%;
+    }
+    .ticket-form{
+        width: 100%;
+    }
+    .sub-heading{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 375px) {
+    .background-pattern {
+        max-width: 70%; 
+    }
+}
+.full-logo{
+    margin-top: 3rem;
+}
+.heading, .ticket-page-heading{
+    color: hsl(0, 0%, 100%);
+    margin-top: 2.5rem;
+    font-size: clamp(1.8rem, 1.5rem + 2vw, 3.5rem);
+    line-height: 1.15;
+}
+.sub-heading{
+    color: hsl(252, 6%, 83%);
+    margin: 1rem 0 2rem 0;
+}
+.ticket-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 60%;
+    margin-bottom: 3rem;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+.line-pattern{
+    position: fixed;
+    left: 0;
+    z-index: -1;
+}
+.circular-pattern{
+    position: fixed;
+    left: 65%;
+    bottom: 7%;
+    z-index: -1;
+}
+.upload-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.upload-label, .upload-info{
+    align-self: flex-start;
+}
+.upload-label{
+    font-size: clamp(0.9rem, 1rem + 2vw, 0.75rem);
+}
+.upload-info{
+    font-size: 11px;
+}
+.upload-error-info{
+    display: none;
+    color: hsl(0, 100%, 50%);
+}
+.upload-info-box{
+    display: flex;
+    gap: 0.5rem;
+}
+.upload-field{
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    border: 2px dashed hsl(245, 15%, 58%);
+    background:  hsla(245, 19%, 35%, 0.3);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+.upload-field:hover{
+    background:  hsla(245, 19%, 35%, 0.6);
+}
+.upload-input{
+    display: none;
+}
+.upload-box-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: auto;
+    padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+    border-radius: 0.5rem;
+    border: 0.5px solid hsla(245, 15%, 58%, 0.5);
+    background: hsla(245, 19%, 35%, 0.7);
+}
+.uploaded-image-mode{
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.uploaded-image{
+    max-width: 3.5rem;
+    border-radius: 0.55rem;
+}
+.uploaded-image-controls{
+    display: flex;
+    gap: 0.5rem;
+}
+.control-btn{
+    padding: 0.25rem 0.25rem 0.35rem 0.25rem;
+    border-radius: 0.25rem;
+    outline: none;
+    cursor: pointer;
+    background: hsla(245, 19%, 35%, 0.8);
+    color: hsl(252, 6%, 83%);
+    border: none;
+    font-size: 12px;
+}
+.control-btn:hover{
+    background: hsl(245, 19%, 35%);
+}
+.input-label{
+    align-self: flex-start;
+    margin-bottom: 0.25rem;
+    font-size: clamp(0.9rem, 1rem + 2vw, 0.75rem);
+}
+.input-box{
+    height: 2.8rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 2px solid hsl(245, 15%, 58%);
+    background:  hsla(245, 19%, 35%, 0.3);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.input-box:hover{
+    background:  hsla(245, 19%, 35%, 0.6)
+}
+.input-box.error {
+    border-color: hsl(0, 100%, 50%);
+    background: hsla(0, 100%, 50%, 0.1);
+}
+.email-error-info-box{
+    display: none;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+    color: hsl(0, 100%, 50%);
+}
+.email-error-info, .full-name-error-info, .username-error-info{
+    font-size: 11px;
+}
+.full-name-error-box{
+    display: none;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+    color: hsl(0, 100%, 50%);
+}
+.username-error-box{
+    display: none;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+    color: hsl(0, 100%, 50%);
+}
+.generate-btn{
+    height: 2.8rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    background: hsl(7, 71%, 60%);
+    color: hsl(0, 0%, 0%);
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+.generate-btn:hover{
+    box-shadow: 0 3px 2rem 0.2rem hsl(7, 71%, 60%);
+}
+.ticket-page{
+    display: none;
+}
+.ticket-name{
+    background-image: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.ticket-email{
+    color: hsl(7, 71%, 60%);
+    overflow-wrap: break-word;
+}
+.ticket-page-sub-heading{
+    margin: 1rem 0 4rem 0;
+    width: 70%;
+}
+.ticket-pattern-wrapper {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: auto; 
+    margin-bottom: 3rem;
+}
+.ticket-pattern{
+    max-width: 88%;
+}
+.ticket-box{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 83%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    z-index: -1; 
+}
+.ticket-row-1, .ticket-row-2{
+    display: flex;
+    gap: 0.75rem;
+}
+.ticket-logo-info{
+    justify-self: flex-start;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.ticket-logo-info-box{
+    align-self: self-end;
+}
+.conf-date, .ticket-avatar-github-username{
+    font-size: 13px;
+    color: hsl(252, 6%, 83%);
+}
+.ticket-avatar-image{
+    max-width: 13%;
+    border-radius: 0.5rem;
+}
+.ticket-logo{
+    max-width: 7%;
+    align-self: center;
+}
+.ticket-avatar-info{
+    align-self: center;
+}
+.ticket-avatar-name{
+    justify-self: flex-start;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.github-info{
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 820px) {
+    .ticket-box {
+        width: 90%; /* Adjust the size for smaller screens */
+        gap: 4rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .ticket-box {
+        gap: 3rem;
+    }
+    .ticket-logo-info{
+        font-size: 1.2rem;
+    }
+    .ticket-avatar-name{
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+}
+@media screen and (max-width: 460px) {
+    .ticket-box {
+        gap: 2rem;
+    }
+    .ticket-logo-info{
+        font-size: 1rem;
+    }
+    .ticket-avatar-image{
+        max-width: 16%;
+    }
+    .conf-date, .ticket-avatar-github-username{
+        font-size: 12px;
+    }
+    .ticket-avatar-name{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 460px) {
+    .ticket-box {
+        gap: 1.5rem;
+    }
+    .ticket-pattern{
+        max-width: 95%;
+    }
+    .upload-text{
+        font-size: 12px;
+    }
+    .upload-icon{
+        width: 100%;
+    }
+    .upload-info-box{
+        gap: 0.25rem;
+    }
+    .upload-info{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .icon{
+        width: 25%;
+    }
+}
+
+
