@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@layer utilities {
+  .font-outfit {
+    font-family: 'Outfit', sans-serif;
+  }
+}
